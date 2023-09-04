@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Data.SqlClient;
 using System.Data;
 
 namespace AddressBookSystemADO
@@ -124,6 +123,37 @@ namespace AddressBookSystemADO
                 com.Parameters.AddWithValue("@Email", obj.Email);
                 con.Open();
                 int i = com.ExecuteNonQuery(); 
+                con.Close();
+                if (i != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+        public bool DeleteData(AddressModel add)
+        {
+            try
+            {
+                connection();
+                SqlCommand com = new SqlCommand("DeleteContactDetails", con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@FirstName", add.FirstName);
+                con.Open();
+                int i = com.ExecuteNonQuery();
                 con.Close();
                 if (i != 0)
                 {

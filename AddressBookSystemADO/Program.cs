@@ -33,6 +33,8 @@ public class Program
 
         };
         //operation.executedorNot(operation.AddEmployee(data));
-        operation.executedorNot(operation.EditData(data));
+        //operation.executedorNot(operation.EditData(data));
+        operation.executedorNot(operation.DeleteData(data));
+
     }
 }

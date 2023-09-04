@@ -1,7 +1,10 @@
-﻿public class Program
+﻿using AddressBookSystemADO;
+
+public class Program
 {
-    private static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Address Book using ADO.NET");
+        AddressOperations operation = new AddressOperations();
+        operation.CreateDatabase();
     }
 }

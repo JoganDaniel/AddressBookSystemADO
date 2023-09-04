@@ -19,6 +19,20 @@ public class Program
             Email = "a@a.com"
 
         };
-        operation.executedorNot(operation.AddEmployee(data));
+        AddressModel edit
+            = new AddressModel()
+        {
+            FirstName = "a",
+            LastName = "abcd",
+            Address = "a",
+            City = "a",
+            State = "a",
+            Zip = 12334,
+            PhoneNumber = "9876543210",
+            Email = "a@a.com"
+
+        };
+        //operation.executedorNot(operation.AddEmployee(data));
+        operation.executedorNot(operation.EditData(data));
     }
 }

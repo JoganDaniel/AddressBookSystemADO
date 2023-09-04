@@ -34,12 +34,15 @@ public class Program
         };
         //operation.executedorNot(operation.AddEmployee(data));
         //operation.executedorNot(operation.EditData(data));
-        operation.executedorNot(operation.DeleteData(data));
-        string citysearch = "a";
-        string statesearch = "b";
-        operation.GetAllEmployeeDetailsByCity(citysearch);
-        operation.DisplayAllDataByCity(citysearch);
-        operation.GetAllEmployeeDetailsByState(statesearch);
-        operation.DisplayAllDataByState(statesearch);
+        //operation.executedorNot(operation.DeleteData(data));
+        //string citysearch = "a";
+        //string statesearch = "b";
+        //operation.GetAllEmployeeDetailsByCity(citysearch);
+        //operation.DisplayAllDataByCity(citysearch);
+        //operation.GetAllEmployeeDetailsByState(statesearch);
+        //operation.DisplayAllDataByState(statesearch);
+        operation.SizeByCity();
+        operation.SizeByState();
+
     }
 }

@@ -43,6 +43,7 @@ public class Program
         //operation.DisplayAllDataByState(statesearch);
         operation.SizeByCity();
         operation.SizeByState();
+        operation.GetPeopleInCitySortedByName("a");
 
     }
 }

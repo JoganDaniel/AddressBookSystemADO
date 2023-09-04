@@ -41,9 +41,9 @@ public class Program
         //operation.DisplayAllDataByCity(citysearch);
         //operation.GetAllEmployeeDetailsByState(statesearch);
         //operation.DisplayAllDataByState(statesearch);
-        operation.SizeByCity();
-        operation.SizeByState();
-        operation.GetPeopleInCitySortedByName("a");
-
+        //operation.SizeByCity();
+        //operation.SizeByState();
+        //operation.GetPeopleInCitySortedByName("a");
+        operation.CountByType();
     }
 }

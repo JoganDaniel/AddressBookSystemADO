@@ -26,7 +26,7 @@ public class Program
             LastName = "abcd",
             Address = "a",
             City = "a",
-            State = "a",
+            State = "b",
             Zip = 12334,
             PhoneNumber = "9876543210",
             Email = "a@a.com"
@@ -35,6 +35,11 @@ public class Program
         //operation.executedorNot(operation.AddEmployee(data));
         //operation.executedorNot(operation.EditData(data));
         operation.executedorNot(operation.DeleteData(data));
-
+        string citysearch = "a";
+        string statesearch = "b";
+        operation.GetAllEmployeeDetailsByCity(citysearch);
+        operation.DisplayAllDataByCity(citysearch);
+        operation.GetAllEmployeeDetailsByState(statesearch);
+        operation.DisplayAllDataByState(statesearch);
     }
 }

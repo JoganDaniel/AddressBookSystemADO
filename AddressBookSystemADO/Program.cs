@@ -44,6 +44,7 @@ public class Program
         //operation.SizeByCity();
         //operation.SizeByState();
         //operation.GetPeopleInCitySortedByName("a");
-        operation.CountByType();
+        //operation.CountByType();
+        operation.PersonAsTwoRelation("kanha", "Profession");
     }
 }

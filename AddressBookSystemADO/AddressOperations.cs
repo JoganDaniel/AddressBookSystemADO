@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using Newtonsoft.Json;
 
 namespace AddressBookSystemADO
 {
@@ -16,6 +17,7 @@ namespace AddressBookSystemADO
             string connectionStr = "data source = (localdb)\\MSSQLLocalDB; initial catalog=AddressBookService;integrated security = true ";
             con = new SqlConnection(connectionStr);
         }
+        
         public void CreateDatabase()
         {
             connection();
@@ -489,6 +491,41 @@ namespace AddressBookSystemADO
             {
                 con.Close();
             }
+        }
+        
+        public void GetAllDetails()
+        {
+            connection();
+            List<AddressModel> emplist = new List<AddressModel>();
+            SqlCommand com = new SqlCommand("AllDetail", con);
+            com.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            con.Open();
+            da.Fill(dt);
+            con.Close();
+            foreach (DataRow dr in dt.Rows)
+            {
+                emplist.Add(
+                        new AddressModel
+                        {
+                            Id = Convert.ToInt32(dr["id"]),
+                            FirstName = Convert.ToString(dr["firstname"]),
+                            LastName = Convert.ToString(dr["lastname"]),
+                            Address = Convert.ToString(dr["address"]),
+                            City = Convert.ToString(dr["city"]),
+                            State = Convert.ToString(dr["state"]),
+                            Zip = Convert.ToInt64(dr["zip"]),
+                            PhoneNumber = Convert.ToString(dr["phone"]),
+                            Email = Convert.ToString(dr["email"])
+                        });
+            }
+            foreach (var data in emplist)
+            {
+                Console.WriteLine(data.Id + " " + data.FirstName + " " + data.LastName + " " + data.Address + " " + data.City + " " + data.State + " " + data.Zip + " " + data.PhoneNumber + " " + data.Email);
+            }
+            var json = JsonConvert.SerializeObject(emplist);
+            File.WriteAllText(@"E:\Bridgelabz\AddressBookSystemADO\AddressBookSystemADO\AddressBookSystemADO\AddressBookJson.json", json);
         }
     }
 }

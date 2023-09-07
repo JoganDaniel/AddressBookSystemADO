@@ -7,31 +7,31 @@ public class Program
         AddressOperations operation = new AddressOperations();
         //operation.CreateDatabase();
         //operation.CreateTable();
-        AddressModel data = new AddressModel()
-        {
-            FirstName = "a",
-            LastName = "a",
-            Address = "a",
-            City = "a",
-            State = "a",
-            Zip = 989898,
-            PhoneNumber = "9876543210",
-            Email = "a@a.com"
+        //AddressModel data = new AddressModel()
+        //{
+        //    FirstName = "a",
+        //    LastName = "a",
+        //    Address = "a",
+        //    City = "a",
+        //    State = "a",
+        //    Zip = 989898,
+        //    PhoneNumber = "9876543210",
+        //    Email = "a@a.com"
 
-        };
-        AddressModel edit
-            = new AddressModel()
-        {
-            FirstName = "a",
-            LastName = "abcd",
-            Address = "a",
-            City = "a",
-            State = "b",
-            Zip = 12334,
-            PhoneNumber = "9876543210",
-            Email = "a@a.com"
+        //};
+        //AddressModel edit
+        //    = new AddressModel()
+        //{
+        //    FirstName = "a",
+        //    LastName = "abcd",
+        //    Address = "a",
+        //    City = "a",
+        //    State = "b",
+        //    Zip = 12334,
+        //    PhoneNumber = "9876543210",
+        //    Email = "a@a.com"
 
-        };
+        //};
         //operation.executedorNot(operation.AddEmployee(data));
         //operation.executedorNot(operation.EditData(data));
         //operation.executedorNot(operation.DeleteData(data));
@@ -46,7 +46,7 @@ public class Program
         //operation.GetPeopleInCitySortedByName("a");
         //operation.CountByType();
         //operation.PersonAsTwoRelation("kanha", "Profession");
-        List<AddressModel> list = new List<AddressModel>();
+        /*List<AddressModel> list = new List<AddressModel>();
         list.Add(new AddressModel()
         {
             FirstName = "a",
@@ -104,10 +104,11 @@ public class Program
             Email = "e@efef",
             Relation = "Others"
         });
-
-        Multithreading thread = new Multithreading();
-        thread.UsingWithThread(list);
-        thread.UsingWithThread(list);
+        */
+        //Multithreading thread = new Multithreading();
+        //thread.UsingWithThread(list);
+        //thread.UsingWithThread(list);
+        operation.GetAllDetails();
 
     }
 }

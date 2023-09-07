@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "dac8ebe1-3aca-4919-bb2d-e6d63762f823",
+		"name": "Adddress_Boook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29501706"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\":12 ,\r\n        \"FirstName\": \"a\",\r\n        \"LastName\": \"a\",\r\n        \"Address\": \"a\",\r\n        \"City\": \"a\",\r\n        \"State\": \"a\",\r\n        \"Zip\": 989898,\r\n        \"PhoneNumber\": \"9876543210\",\r\n        \"Email\": \"a@a.com\",\r\n        \"Count\": 0,\r\n        \"Relation\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/address/12",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"id\": 12,\r\n    \"FirstName\": \"update\",\r\n    \"LastName\": \"a\",\r\n    \"Address\": \"a\",\r\n    \"City\": \"a\",\r\n    \"State\": \"a\",\r\n    \"Zip\": 989898,\r\n    \"PhoneNumber\": \"9876543210\",\r\n    \"Email\": \"a@a.com\",\r\n    \"Count\": 0,\r\n    \"Relation\": null\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/address/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"address",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/address/13",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/address/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"address",
+						"13"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

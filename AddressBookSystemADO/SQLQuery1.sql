@@ -38,6 +38,11 @@ As
 Begin Delete from AddressBook where firstName=@firstName
 End
 
+Create Procedure AllDetail
+As
+Begin
+select * from AddressBook;
+end
 
 Alter Procedure DetailsinCity(
 @city varchar(20)
